@@ -526,7 +526,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2124215246}
+      - m_Target: {fileID: 2124215248}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: StartButtonPressed
         m_Mode: 1
@@ -535,7 +535,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: StartButtonPressed
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &908816646
@@ -841,7 +841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2124215247}
-  - component: {fileID: 2124215246}
+  - component: {fileID: 2124215248}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -849,18 +849,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2124215246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124215245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d10f8d4d88ad854984f5bfc27e9adb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2124215247
 Transform:
   m_ObjectHideFlags: 0
@@ -876,6 +864,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124215248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124215245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d10f8d4d88ad854984f5bfc27e9adb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreManager
+public static class ScoreManager
 {
-    // Start is called before the first frame update
-    void Start()
+    static int score = 0;
+    private static int bestScore = score;
+
+    public static void IncreaseScore()
     {
-        
+        score++;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static int GetScore()
     {
-        
+        return score;
+    }
+    public static void SetBestScore()
+    {
+        if (score > bestScore) bestScore = score;
+    }
+
+    public static int GetBestScore()
+    {
+        return bestScore;
+    }
+
+    public static void ResetScore()
+    {
+        score = 0;
     }
 }

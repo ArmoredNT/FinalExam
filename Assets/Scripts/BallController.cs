@@ -8,6 +8,7 @@ public class BallController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private TextMeshProUGUI scoreText;
+    
     [SerializeField] private UiManager uiManager;
     
     private bool xAxis = true;
@@ -70,8 +71,8 @@ public class BallController : MonoBehaviour
 
     public void IncreaseScore()
     {
-        score++;
-        scoreText.text = "Score: " + score;
+        ScoreManager.IncreaseScore();
+        scoreText.text = "Score: " + ScoreManager.GetScore();
     }
 
     public void ButtonTest()
