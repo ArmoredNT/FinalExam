@@ -8,7 +8,7 @@ public class BallController : MonoBehaviour
     [SerializeField] private LayerMask groundLayers;
     
     private bool xAxis = true;
-    private bool onGround = true;
+    public bool onGround = true;
     
     private float _depth;
     private Vector3 movDir;
@@ -31,7 +31,7 @@ public class BallController : MonoBehaviour
         
         if (!CheckGround())
         {
-            //onGround = false;
+            onGround = false;
         }
         
         if (xAxis && onGround)
