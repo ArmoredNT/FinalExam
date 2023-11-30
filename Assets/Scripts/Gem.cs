@@ -15,6 +15,7 @@ public class Gem : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            other.GetComponent<BallController>().IncreaseScore();
             Destroy(gameObject);
         }
         

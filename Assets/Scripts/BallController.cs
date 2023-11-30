@@ -1,17 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private LayerMask groundLayers;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private UiManager uiManager;
     
     private bool xAxis = true;
     public bool onGround = true;
     
     private float _depth;
     private Vector3 movDir;
+
+    private int score = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -45,6 +50,7 @@ public class BallController : MonoBehaviour
         else
         {
             GetComponent<Rigidbody>().useGravity = true;
+            uiManager.GameOver();
             print("hey");
         }
 
@@ -61,4 +67,15 @@ public class BallController : MonoBehaviour
         return Physics.Raycast(transform.position, Vector3.down, _depth, groundLayers);
         //Debug.DrawRay(transform.position, Vector3.down * _depth, Color.green, 0, false);
     }
-}
+
+    public void IncreaseScore()
+    {
+        score++;
+        scoreText.text = "Score: " + score;
+    }
+
+    public void ButtonTest()
+    {
+        print("you pressed a button");
+    }
+ }
