@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
     private float _depth;
     void Start()
     {
-        InputManager.init(this);
-        InputManager.gameMode();
+        // InputManager.init(this);
+        // InputManager.gameMode();
 
         _text.text = "0";
         _depth = transform.localScale.y * 0.5f + 0.01f;

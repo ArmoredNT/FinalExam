@@ -114,6 +114,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "BallGame",
+            "id": "ae4d76c9-79bd-44f6-836c-e69e7fecce76",
+            "actions": [
+                {
+                    "name": "Switch",
+                    "type": "Button",
+                    "id": "ff947876-cdc6-4369-a9df-99632e352351",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bc6a2cf1-6d68-47b5-9867-30e69aacd9ae",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
