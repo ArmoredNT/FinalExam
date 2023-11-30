@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformSpawning : MonoBehaviour
 {
     [SerializeField] private GameObject platform;
+    [SerializeField] private GameObject gem;
     [SerializeField] private BallController _ballController;
 
     private Vector3 location;
@@ -23,6 +24,11 @@ public class PlatformSpawning : MonoBehaviour
                 location += new Vector3(0, 0, 2);
             }
 
+            if (Random.Range(0, 5) == 1)
+            {
+                Instantiate(gem, location + new Vector3(0, 1, 0), Quaternion.identity);
+            }
+            
             Instantiate(platform, location, Quaternion.identity);
         }
 
@@ -39,6 +45,11 @@ public class PlatformSpawning : MonoBehaviour
         else
         {
             location += new Vector3(0, 0, 2);
+        }
+        
+        if (Random.Range(0, 5) == 1)
+        {
+            Instantiate(gem, location + new Vector3(0, 1, 0), Quaternion.identity);
         }
 
         Instantiate(platform, location, Quaternion.identity);
