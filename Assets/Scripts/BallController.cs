@@ -19,7 +19,7 @@ public class BallController : MonoBehaviour
         InputManager.init(this);
         InputManager.gameMode();
         
-        _depth = transform.localScale.y * 0.5f + 0.01f;
+        _depth = transform.localScale.y * 0.5f + 0.2f;
         
         movDir = new Vector3(0, 0, 0);
     }
@@ -31,7 +31,7 @@ public class BallController : MonoBehaviour
         
         if (!CheckGround())
         {
-            onGround = false;
+            //onGround = false;
         }
         
         if (xAxis && onGround)
@@ -45,6 +45,7 @@ public class BallController : MonoBehaviour
         else
         {
             GetComponent<Rigidbody>().useGravity = true;
+            print("hey");
         }
 
         transform.position += (speed * Time.deltaTime * movDir);
